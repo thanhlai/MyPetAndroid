@@ -1,0 +1,2 @@
+assets folder: game sprites, custom image
+res/drawable: system-alike icons, functionaly images
