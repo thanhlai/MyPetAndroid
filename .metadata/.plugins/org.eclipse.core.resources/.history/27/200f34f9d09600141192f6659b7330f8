@@ -1,0 +1,16 @@
+package com.meganet.mypetandroid;
+
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.widget.ImageView;
+
+public class GameGestureDetector extends GestureDetector{
+	ImageView _imageView;
+	
+	
+	@Override
+	public boolean onTouchEvent(MotionEvent ev) {
+		// TODO Auto-generated method stub
+		return super.onTouchEvent(ev);
+	}
+}

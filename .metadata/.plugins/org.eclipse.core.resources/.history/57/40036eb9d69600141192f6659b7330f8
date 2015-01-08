@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Pet Android</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pet_image">Android Pet Image</string>
+	<string name="love_button_image">Love Button Image</string>
+	<string name="poop_button_image">Pet Poop Button Image</string>
+</resources>

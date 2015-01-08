@@ -1,0 +1,22 @@
+package com.meganet.mypetandroid;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import android.widget.ImageView;
+
+public class AnimationClass extends TimerTask {
+	private ImageView _imgView;
+	private Timer _timer;
+	private int _index;
+	
+	public AnimationClass(ImageView imgView, int index) {
+		
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+
+}

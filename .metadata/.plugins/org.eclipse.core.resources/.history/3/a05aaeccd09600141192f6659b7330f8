@@ -1,0 +1,7 @@
+package com.meganet.mypetandroid;
+
+import android.view.GestureDetector;
+
+public class GameGestureDetector extends GestureDetector{
+
+}

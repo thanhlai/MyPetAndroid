@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/poopImageViewId"
+        android:contentDescription="@string/poop_button_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="poopButtonClick"
+        android:src="@drawable/poop_active">
+     </ImageView>
+    
+    <ImageView
+        android:id="@+id/healImageViewId"
+        android:contentDescription="@string/heal_button_image"
+         android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="healButtonClick"
+        android:src="@drawable/heal_active">
+    </ImageView>
+    
+    <ImageView
+        android:id="@+id/sleepImageViewId"
+        android:contentDescription="@string/sleep_button_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="sleepButtonClick"
+        android:src="@drawable/sleep_passive">
+    </ImageView>
+    
+    <ImageView
+        android:id="@+id/eatImageViewId"
+        android:contentDescription="@string/eat_button_image"
+         android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="eatButtonClick"
+        android:src="@drawable/eat_active">
+    </ImageView>
+    
+    <ImageView
+        android:id="@+id/skillImageViewId"
+        android:contentDescription="@string/skill_button_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="skillButtonClick"
+        android:src="@drawable/skill_active">     
+    </ImageView>
+        
+    <ImageView
+        android:id="@+id/loveButtonImageViewId"
+        android:contentDescription="@string/love_button_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="loveButtonClick"
+        android:src="@drawable/heart_active">
+    </ImageView>
+    
+</LinearLayout>

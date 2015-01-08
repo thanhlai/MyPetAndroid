@@ -1,0 +1,65 @@
+package com.meganet.mypetandroid;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import android.app.Activity;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.view.View;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+	String eggImg = "egg.png";
+	ImageView petImageView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		setup();
+		
+		
+		TranslateAnimation animation = new TranslateAnimation(0.0f, 400.0f,
+			    0.0f, 0.0f);
+			  animation.setDuration(5000);
+			  animation.setRepeatCount(5);
+			  animation.setRepeatMode(2);
+			  animation.setFillAfter(true);
+			  
+			  petImageView.startAnimation(animation)
+		
+	}
+
+	private void setup() {
+		petImageView = (ImageView) findViewById(R.id.petImageViewId);
+		petImageView.setImageBitmap(getBitmapFromAsset(eggImg));
+	}
+
+	// Helper
+	private Bitmap getBitmapFromAsset(String fileName) {
+		AssetManager assetManager = getAssets();
+		InputStream istr = null;
+		try {
+			istr = assetManager.open(fileName);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Bitmap bitmap = BitmapFactory.decodeStream(istr);
+		return bitmap;
+	}
+	
+	public void poopButtonClick(View v) {
+		Toast.makeText(v.getContext(), "Poop -1", Toast.LENGTH_LONG).show();
+	}
+	
+	public void heartButtonClick(View v) {
+		Toast.makeText(v.getContext(), "Heart +1", Toast.LENGTH_LONG).show();
+	}
+
+}

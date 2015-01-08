@@ -1,2 +1,5 @@
-assets folder: game sprites, custom image
-res/drawable: system-alike icons, functionaly images
+https://www.freesound.org/people/dav0r/sounds/176754/
+https://www.freesound.org/people/Lord_vor_Edocsil/sounds/203314/
+https://www.freesound.org/people/garotasimpatica/sounds/75623/
+https://www.freesound.org/people/LloydEvans09/sounds/184825/
+https://www.freesound.org/people/Adam_N/sounds/166321/

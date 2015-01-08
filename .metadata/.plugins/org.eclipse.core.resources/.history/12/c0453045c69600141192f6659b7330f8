@@ -1,0 +1,7 @@
+package com.meganet.mypetandroid;
+
+import java.util.TimerTask;
+
+public class AnimationClass extends TimerTask {
+
+}

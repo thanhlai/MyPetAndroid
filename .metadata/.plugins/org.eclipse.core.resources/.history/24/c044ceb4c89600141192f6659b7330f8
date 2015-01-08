@@ -1,0 +1,22 @@
+package com.meganet.mypetandroid;
+
+import android.view.animation.TranslateAnimation;
+
+public class _Helper {
+	/**
+	 *  fromXDelta Change in X coordinate to apply at the start of the animation
+	 *	toXDelta Change in X coordinate to apply at the end of the animation
+	 *  fromYDelta Change in Y coordinate to apply at the start of the animation
+	 *	toYDelta Change in Y coordinate to apply at the end of the animation
+	 *	0.0f, 400.0f, 0.0f, 0.0f
+	 *	This setting is applied only when the repeat count is either greater than 0 or INFINITE. Defaults to RESTART. 
+	 *  */
+	public static TranslateAnimation getAnimation(float fromXDelta, float toXDelta, float fromYDelta, float toYDelta, int duration, int repeatCount, int ) {
+		TranslateAnimation animation = new TranslateAnimation(fromXDelta,toXDelta,fromYDelta,toYDelta);
+		animation.setDuration(2000);
+		animation.setRepeatCount(5);
+		animation.setRepeatMode(2);
+		animation.setFillAfter(true);
+		return animation;
+	}
+}
