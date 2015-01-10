@@ -1,0 +1,59 @@
+package com.meganet.mypetandroid;
+
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
+import android.app.Activity;
+import android.content.Intent;
+import android.media.Image;
+import android.os.Bundle;
+import android.view.View;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+
+public class LauncherActivity extends Activity {
+	
+	Intent myIntent;
+	ImageView staffImageView, starImageView, starHalfImageView, starEmptyImageView;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_launcher);
+		
+		staffImageView = (ImageView) findViewById(R.id.staffImageViewId);
+		starImageView = (ImageView) findViewById(R.id.starImageViewId);
+		starHalfImageView = (ImageView) findViewById(R.id.starHalfImageViewId);
+		starEmptyImageView = (ImageView) findViewById(R.id.starEmptyImageViewId);
+		
+		
+		AnimatorSet staffSet = (AnimatorSet) AnimatorInflater.loadAnimator(this,
+				R.animator.staff_spin);
+		
+		staffSet.setTarget(staffImageView);
+		staffSet.start();
+		
+		
+		TranslateAnimation animationStar = new TranslateAnimation(0.0f, 600.0f,
+	            80.0f, 120.0f);          //  new TranslateAnimation(xFrom,xTo, yFrom,yTo)
+		animationStar.setDuration(4000);  // animation duration 
+		animationStar.setRepeatCount(200);  
+		animationStar.setRepeatMode(1);
+	    starImageView.startAnimation(animationStar);  // start animation 
+
+	    
+		TranslateAnimation animationHalfStar = new TranslateAnimation(0.0f, 600.0f,
+	            80.0f, 120.0f);          //  new TranslateAnimation(xFrom,xTo, yFrom,yTo)
+		animationHalfStar.setDuration(3000);  // animation duration 
+		animationHalfStar.setRepeatCount(200);  
+		animationHalfStar.setRepeatMode(1);
+	    starImageView.startAnimation(animationHalfStar);  // start animation 
+	    
+		
+		myIntent = new Intent(this, MainActivity.class);
+		
+	}
+	public void nextButtonClick(View v) {
+		this.startActivity(myIntent);
+		finish();
+	}
+}

@@ -11,4 +11,10 @@
 	<string name="eat_button_image">Eat Button Image</string>
 	<string name="heal_button_image">Heal your pet</string>
 	<string name="sleep_button_image">Sleep - Light Bulb</string>
+	<string name="next_button_image">Next Button Image</string>
+	<string name="fire_element">Fire</string>
+	<string name="water_element">Water</string>
+	<string name="earth_element">Earth</string>
+	<string name="wind_element">Wind</string>
+	<string name="staff_image">Staff picture</string>
 </resources>

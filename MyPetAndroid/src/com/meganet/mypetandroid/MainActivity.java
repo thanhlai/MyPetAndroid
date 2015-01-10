@@ -5,7 +5,6 @@ import java.io.InputStream;
 
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -43,27 +42,17 @@ public class MainActivity extends Activity {
 		eggSet.start();
 
 		petImageView.setOnTouchListener(new OnTouchListener() {
-			@SuppressLint("ClickableViewAccessibility")
+
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				int eventaction = event.getAction();
 				if (eventaction == MotionEvent.ACTION_UP) {
-
-					// get system current milliseconds
 					long time = System.currentTimeMillis();
-
-					// if it is the first time, or if it has been more than 3
-					// seconds
-					// since the first tap ( so it is like a new try), we reset
-					// everything
 					if (startMillis == 0 || (time - startMillis > 3000)) {
 						startMillis = time;
 						count = 1;
 					}
-					// it is not the first, and it has been less than 3 seconds
-					// since
-					// the first
-					else { // time-startMillis< 3000
+					else {
 						count++;
 					}
 					if (count == 5) {
@@ -84,6 +73,7 @@ public class MainActivity extends Activity {
 
 					break;
 				case MotionEvent.ACTION_UP:
+					v.performClick();
 //					Toast.makeText(v.getContext(),
 //							"Action up,..." + event.getY(), Toast.LENGTH_LONG)
 //							.show();
@@ -161,11 +151,11 @@ public class MainActivity extends Activity {
 	}
 
 	public void healButtonClick(View v) {
-		Toast.makeText(v.getContext(), "Heal +1", Toast.LENGTH_LONG).show();
+		Toast.makeText(v.getContext(), "Heal +1 - Earning by getting enough sleep (6 to 7 hours/night)", Toast.LENGTH_LONG).show();
 	}
 
 	public void sleepButtonClick(View v) {
-		Toast.makeText(v.getContext(), "Turn off", Toast.LENGTH_LONG).show();
+		Toast.makeText(v.getContext(), "Turn off - Are you sure? You can't turn it on by the next 6/7 hours", Toast.LENGTH_LONG).show();
 	}
 
 }

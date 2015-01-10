@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/fireImageViewId"
+            android:contentDescription="@string/fire_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fire" />
+
+        <ImageView
+            android:id="@+id/waterImageViewId"
+            android:contentDescription="@string/water_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/windImageViewId"
+            android:layout_toRightOf="@+id/fireImageViewId"
+            android:src="@drawable/water" />
+
+        <ImageView
+            android:id="@+id/earthImageViewId"
+            android:contentDescription="@string/earth_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/waterImageViewId"
+            android:layout_below="@+id/waterImageViewId"
+            android:src="@drawable/earth" />
+
+        <ImageView
+            android:id="@+id/windImageViewId"
+            android:contentDescription="@string/wind_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/fireImageViewId"
+            android:src="@drawable/wind" />
+
+    </RelativeLayout>
+    
+    <EditText
+        android:id="@+id/petNameEditTextId" 
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="Name Your Pet">
+    </EditText>
+    
+    <ImageButton
+        android:id="@+id/nextButtonId"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:baselineAlignBottom="true"
+        android:contentDescription="@string/next_button_image"
+        android:onClick="nextButtonClick"
+        android:src="@drawable/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
